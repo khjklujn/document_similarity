@@ -17,7 +17,7 @@ The reason for doing this was to address one of the inherent problems with bag-o
 
 Only using frequency counts, these two documents are evaulated as being exactly the same.
 
-I extended bag-of-words by having the frequency counts be a two-dimensional vector that encoded the "nouniness" and "verbiness" of the tokens using a complex representation with nouniness mapped to the real component and verbiness mapped to the imaginary component.
+Bag-of-words was extended by having the frequency counts be a two-dimensional vector that encoded the "nouniness" and "verbiness" of the tokens using a complex representation with nouniness mapped to the real component and verbiness mapped to the imaginary component.
 
 Using this encoding the token values break down as:
 
