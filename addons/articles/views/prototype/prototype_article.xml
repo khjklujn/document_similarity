@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="articles_prototype_article_form_view">
+        <field name="name">articles_prototype_article.form</field>
+        <field name="model">articles.prototype_article</field>
+        <field name="arch" type="xml">
+            <form string="Prototype Article Form">
+                <sheet>
+                    <notebook>
+                        <page string="Prototype Article">
+                            <group>
+                                <field name="name"/>
+                                <field name="active"/>
+                                <field name="topic_id"/>
+                                <field name="unique_id"/>
+                                <field name="id"/>
+                            </group>
+                        </page>
+                        <page string="Characterization">
+                            <group col="4">
+                                <field name="tokenized"/>
+                                <field name="characterized"/>
+                            </group>
+                        </page>
+                        <page string="Stems">
+                            <field name="prototype_article_stem_ids" widget="many2many">
+                                <tree string="Stems">
+                                    <field name="stem_id"/>
+                                    <field name="occurrences"/>
+                                    <field name="nouniness"/>
+                                    <field name="verbiness"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Corpus Articles">
+                            <field name="prototype_article_corpus_article_ids" widget="many2many">
+                                <tree string="Related Articles">
+                                    <field name="corpus_article_id"/>
+                                    <field name="distance"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_prototype_article_tree_view">
+        <field name="name">articles_prototype_article.tree</field>
+        <field name="model">articles.prototype_article</field>
+        <field name="arch" type="xml">
+            <tree string="Prototype Article Tree">
+                <field name="name"/>
+                <field name="topic_id"/>
+                <field name="id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_prototype_article_search_view">
+        <field name="name">articles_prototype_article.search</field>
+        <field name="model">articles.prototype_article</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter string="All" name="all" domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- window action -->
+    <!--
+        The following tag is an action definition for a "window action",
+        that is an action opening a view or a set of views
+    -->
+    <record model="ir.actions.act_window" id="articles_prototype_article_list_action">
+        <field name="name">Prototype Articles</field>
+        <field name="res_model">articles.prototype_article</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first prototype_article
+            </p>
+        </field>
+    </record>
+</odoo>

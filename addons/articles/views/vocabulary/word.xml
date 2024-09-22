@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="articles_word_form_view">
+        <field name="name">articles_word.form</field>
+        <field name="model">articles.word</field>
+        <field name="arch" type="xml">
+            <form string="Word Form">
+                <sheet>
+                    <notebook>
+                        <page string="Word">
+                            <group>
+                                <field name="name"/>
+                                <field name="active"/>
+                                <field name="stem_id"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_word_tree_view">
+        <field name="name">articles_word.tree</field>
+        <field name="model">articles.word</field>
+        <field name="arch" type="xml">
+            <tree string="Word Tree">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_word_search_view">
+        <field name="name">articles_word.search</field>
+        <field name="model">articles.word</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter string="All" name="all" domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- window action -->
+    <!--
+        The following tag is an action definition for a "window action",
+        that is an action opening a view or a set of views
+    -->
+    <record model="ir.actions.act_window" id="articles_word_list_action">
+        <field name="name">Words</field>
+        <field name="res_model">articles.word</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first word
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="articles_journal_form_view">
+        <field name="name">articles_journal.form</field>
+        <field name="model">articles.journal</field>
+        <field name="arch" type="xml">
+            <form string="Journal Form">
+                <sheet>
+                    <notebook>
+                        <page string="Journal">
+                            <group>
+                                <field name="name"/>
+                                <field name="active"/>
+                                <field name="id"/>
+                            </group>
+                        </page>
+                        <page string="Articles">
+                            <field name="corpus_article_ids" widget="many2many">
+                                <tree string="Articles">
+                                    <field name="name"/>
+                                    <field name="corpus_id"/>
+                                    <field name="journal_id"/>
+                                    <field name="year_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_journal_tree_view">
+        <field name="name">articles_journal.tree</field>
+        <field name="model">articles.journal</field>
+        <field name="arch" type="xml">
+            <tree string="Journal Tree">
+                <field name="name"/>
+                <field name="id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_journal_search_view">
+        <field name="name">articles_journal.search</field>
+        <field name="model">articles.journal</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter string="All" name="all" domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- window action -->
+    <!--
+        The following tag is an action definition for a "window action",
+        that is an action opening a view or a set of views
+    -->
+    <record model="ir.actions.act_window" id="articles_journal_list_action">
+        <field name="name">Journals</field>
+        <field name="res_model">articles.journal</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first journal
+            </p>
+        </field>
+    </record>
+</odoo>

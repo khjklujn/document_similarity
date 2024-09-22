@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="main_articles_menu" name="Articles"
+        groups="articles_manager,articles_user"
+        sequence="10"
+    />
+
+
+    <menuitem id="articles_corpus_parent_menu" name="Corpus" parent="main_articles_menu"
+        groups="articles_manager,articles_user"
+        sequence="10"
+    />
+
+    <menuitem id="articles_article_ranking_menu" name="Article Rankings" parent="articles_corpus_parent_menu"
+        action="articles_article_ranking_list_action"
+        groups="articles_manager,articles_user"
+        sequence="10"
+    />
+
+    <menuitem id="articles_corpus_article_menu" name="Articles" parent="articles_corpus_parent_menu"
+        action="articles_corpus_article_list_action"
+        groups="articles_manager,articles_user"
+        sequence="20"
+    />
+
+    <menuitem id="articles_corpus_journal_menu" name="Journals" parent="articles_corpus_parent_menu"
+        action="articles_journal_list_action"
+        groups="articles_manager,articles_user"
+        sequence="30"
+    />
+
+    <menuitem id="articles_corpus_year_menu" name="Years" parent="articles_corpus_parent_menu"
+        action="articles_year_list_action"
+        groups="articles_manager,articles_user"
+        sequence="40"
+    />
+
+    <menuitem id="articles_corpus_load_failure_menu" name="Load Failures" parent="articles_corpus_parent_menu"
+        action="articles_load_failure_list_action"
+        groups="articles_manager,articles_user"
+        sequence="50"
+    />
+
+
+    <menuitem id="articles_prototype_parent_menu" name="Prototypes" parent="main_articles_menu"
+        groups="articles_manager,articles_user"
+        sequence="20"
+    />
+
+    <menuitem id="articles_prototype_article_menu" name="Articles" parent="articles_prototype_parent_menu"
+        action="articles_prototype_article_list_action"
+        groups="articles_manager,articles_user"
+        sequence="10"
+    />
+
+    <menuitem id="articles_topic_menu" name="Topics" parent="articles_prototype_parent_menu"
+        action="articles_topic_list_action"
+        groups="articles_manager,articles_user"
+        sequence="20"
+    />
+
+
+    <menuitem id="articles_vocabulary_parent_menu" name="Vocabulary" parent="main_articles_menu"
+        groups="articles_manager,articles_user"
+        sequence="30"
+    />
+
+    <menuitem id="articles_stem_menu" name="Stems" parent="articles_vocabulary_parent_menu"
+        action="articles_stem_list_action"
+        groups="articles_manager,articles_user"
+        sequence="10"
+    />
+
+    <menuitem id="articles_word_menu" name="Words" parent="articles_vocabulary_parent_menu"
+        action="articles_word_list_action"
+        groups="articles_manager,articles_user"
+        sequence="20"
+    />
+</odoo>

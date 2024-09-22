@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="articles_load_failure_form_view">
+        <field name="name">articles_load_failure.form</field>
+        <field name="model">articles.load_failure</field>
+        <field name="arch" type="xml">
+            <form string="Load Failure Form">
+                <sheet>
+                    <notebook>
+                        <page string="Load Failure">
+                            <group>
+                                <field name="name"/>
+                                <field name="unique_id"/>
+                                <field name="category"/>
+                                <field name="reason"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_load_failure_tree_view">
+        <field name="name">articles_load_failure.tree</field>
+        <field name="model">articles.load_failure</field>
+        <field name="arch" type="xml">
+            <tree string="Load Failure Tree">
+                <field name="name"/>
+                <field name="category"/>
+                <field name="reason"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_load_failure_search_view">
+        <field name="name">articles_load_failure.search</field>
+        <field name="model">articles.load_failure</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="reason"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- window action -->
+    <!--
+        The following tag is an action definition for a "window action",
+        that is an action opening a view or a set of views
+    -->
+    <record model="ir.actions.act_window" id="articles_load_failure_list_action">
+        <field name="name">Load Failures</field>
+        <field name="res_model">articles.load_failure</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first load failure
+            </p>
+        </field>
+    </record>
+</odoo>

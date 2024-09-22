@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="articles_stem_form_view">
+        <field name="name">articles_stem.form</field>
+        <field name="model">articles.stem</field>
+        <field name="arch" type="xml">
+            <form string="Stem Form">
+                <sheet>
+                    <notebook>
+                        <page string="Stem">
+                            <group>
+                                <field name="name"/>
+                                <field name="active"/>
+                                <field name="weight"/>
+                                <field name="word_ids" widget="many2many_tags"/>
+                                <field name="id"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_stem_tree_view">
+        <field name="name">articles_stem.tree</field>
+        <field name="model">articles.stem</field>
+        <field name="arch" type="xml">
+            <tree string="Stem Tree">
+                <field name="name"/>
+                <field name="word_ids" widget="many2many_tags"/>
+                <field name="weight"/>
+                <field name="id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_stem_search_view">
+        <field name="name">articles_stem.search</field>
+        <field name="model">articles.stem</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter string="All" name="all" domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- window action -->
+    <!--
+        The following tag is an action definition for a "window action",
+        that is an action opening a view or a set of views
+    -->
+    <record model="ir.actions.act_window" id="articles_stem_list_action">
+        <field name="name">Stems</field>
+        <field name="res_model">articles.stem</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first stem
+            </p>
+        </field>
+    </record>
+</odoo>
