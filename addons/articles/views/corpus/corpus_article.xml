@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="articles_corpus_article_form_view">
+        <field name="name">articles_corpus_article.form</field>
+        <field name="model">articles.corpus_article</field>
+        <field name="arch" type="xml">
+            <form string="Corpus Article Form">
+                <sheet>
+                    <notebook>
+                        <page string="Corpus Article">
+                            <group>
+                                <field name="name"/>
+                                <field name="source_file"/>
+                                <field name="active"/>
+                                <field name="corpus_id"/>
+                                <field name="journal_id"/>
+                                <field name="year_id"/>
+                                <field name="unique_id"/>
+                                <field name="id"/>
+                            </group>
+                        </page>
+                        <page string="Characterization">
+                            <group col="4">
+                                <field name="read_status"/>
+                                <field name="percent_about"/>
+                                <field name="training_status"/>
+                                <field name="category"/>
+                                <field name="united_status"/>
+                            </group>
+                            <group col="4">
+                                <field name="tokenized"/>
+                                <field name="characterized"/>
+                            </group>
+                        </page>
+                        <page string="Stems">
+                            <field name="corpus_article_stem_ids" widget="many2many">
+                                <tree string="Stems">
+                                    <field name="stem_id"/>
+                                    <field name="occurrences"/>
+                                    <field name="nouniness"/>
+                                    <field name="verbiness"/>
+                                    <field name="weight"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Prototype Articles">
+                            <field name="prototype_article_corpus_article_ids" widget="many2many">
+                                <tree string="Prototype Articles">
+                                    <field name="prototype_article_id"/>
+                                    <field name="topic_id"/>
+                                    <field name="distance"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Related Articles">
+                            <field name="corpus_article_corpus_article_ids" widget="many2many">
+                                <tree string="Related Articles">
+                                    <field name="corpus_article_id"/>
+                                    <field name="distance"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_corpus_article_tree_view">
+        <field name="name">articles_corpus_article.tree</field>
+        <field name="model">articles.corpus_article</field>
+        <field name="arch" type="xml">
+            <tree string="Corpus Article Tree">
+                <field name="name"/>
+                <field name="read_status"/>
+                <field name="united_status"/>
+                <field name="training_status"/>
+                <field name="category"/>
+                <field name="corpus_id"/>
+                <field name="journal_id"/>
+                <field name="year_id"/>
+                <field name="id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="articles_corpus_article_search_view">
+        <field name="name">articles_corpus_article.search</field>
+        <field name="model">articles.corpus_article</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="source_file"/>
+                <filter string="All" name="all" domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- window action -->
+    <!--
+        The following tag is an action definition for a "window action",
+        that is an action opening a view or a set of views
+    -->
+    <record model="ir.actions.act_window" id="articles_corpus_article_list_action">
+        <field name="name">Corpus Articles</field>
+        <field name="res_model">articles.corpus_article</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first corpus_article
+            </p>
+        </field>
+    </record>
+</odoo>

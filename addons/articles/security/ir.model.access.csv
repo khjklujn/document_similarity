@@ -1,0 +1,60 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+articles_article_ranking_admin,articles.article_ranking admin,model_articles_article_ranking,articles_admin,1,1,1,1
+articles_article_ranking_manager,articles.article_ranking manager,model_articles_article_ranking,articles_manager,1,1,1,0
+articles_article_ranking_user,articles.article_ranking user,model_articles_article_ranking,articles_user,1,1,1,0
+
+articles_corpus_article_admin,articles.corpus_article admin,model_articles_corpus_article,articles_admin,1,1,1,1
+articles_corpus_article_manager,articles.corpus_article manager,model_articles_corpus_article,articles_manager,1,1,1,0
+articles_corpus_article_user,articles.corpus_article user,model_articles_corpus_article,articles_user,1,1,1,0
+
+articles_corpus_article_corpus_article_admin,articles.corpus_corpus_article admin,model_articles_corpus_article_corpus_article,articles_admin,1,1,1,1
+articles_corpus_article_corpus_article_manager,articles.corpus_corpus_article manager,model_articles_corpus_article_corpus_article,articles_manager,1,1,1,0
+articles_corpus_article_corpus_article_user,articles.corpus_corpus_article user,model_articles_corpus_article_corpus_article,articles_user,1,1,1,0
+
+articles_corpus_article_stem_admin,articles.corpus_stem admin,model_articles_corpus_article_stem,articles_admin,1,1,1,1
+articles_corpus_article_stem_manager,articles.corpus_stem manager,model_articles_corpus_article_stem,articles_manager,1,1,1,0
+articles_corpus_article_stem_user,articles.corpus_article_stem user,model_articles_corpus_article_stem,articles_user,1,1,1,0
+
+articles_corpus_admin,articles.corpus admin,model_articles_corpus,articles_admin,1,1,1,1
+articles_corpus_manager,articles.corpus manager,model_articles_corpus,articles_manager,1,1,1,0
+articles_corpus_user,articles.corpus user,model_articles_corpus,articles_user,1,1,1,0
+
+articles_journal_admin,articles.journal admin,model_articles_journal,articles_admin,1,1,1,1
+articles_journal_manager,articles.journal manager,model_articles_journal,articles_manager,1,1,1,0
+articles_journal_user,articles.journal user,model_articles_journal,articles_user,1,1,1,0
+
+articles_load_failure_admin,articles.load_failure admin,model_articles_load_failure,articles_admin,1,1,1,1
+articles_load_failure_manager,articles.load_failure manager,model_articles_load_failure,articles_manager,1,1,1,0
+articles_load_failure_user,articles.load_failure user,model_articles_load_failure,articles_user,1,1,1,0
+
+articles_year_admin,articles.year admin,model_articles_year,articles_admin,1,1,1,1
+articles_year_manager,articles.year manager,model_articles_year,articles_manager,1,1,1,0
+articles_year_user,articles.year user,model_articles_year,articles_user,1,1,1,0
+
+
+
+articles_prototype_article_admin,articles.prototype_article admin,model_articles_prototype_article,articles_admin,1,1,1,1
+articles_prototype_article_manager,articles.prototype_article manager,model_articles_prototype_article,articles_manager,1,1,1,0
+articles_prototype_article_user,articles.prototype_article user,model_articles_prototype_article,articles_user,1,1,1,0
+
+articles_prototype_article_corpus_article_admin,articles.prototype_article_corpus_article admin,model_articles_prototype_article_corpus_article,articles_admin,1,1,1,1
+articles_prototype_article_corpus_article_manager,articles.prototype_article_corpus_article manager,model_articles_prototype_article_corpus_article,articles_manager,1,1,1,0
+articles_prototype_article_corpus_article_user,articles.prototype_article_corpus_article user,model_articles_prototype_article_corpus_article,articles_user,1,1,1,0
+
+articles_prototype_article_stem_admin,articles.prototype_article_stem admin,model_articles_prototype_article_stem,articles_admin,1,1,1,1
+articles_prototype_article_stem_manager,articles.prototype_article_stem manager,model_articles_prototype_article_stem,articles_manager,1,1,1,0
+articles_prototype_article_stem_user,articles.prototype_article_stem user,model_articles_prototype_article_stem,articles_user,1,1,1,0
+
+articles_topic_admin,articles.topic admin,model_articles_topic,articles_admin,1,1,1,1
+articles_topic_manager,articles.topic manager,model_articles_topic,articles_manager,1,1,1,0
+articles_topic_user,articles.topic user,model_articles_topic,articles_user,1,1,1,0
+
+
+
+articles_stem_admin,articles.stem admin,model_articles_stem,articles_admin,1,1,1,1
+articles_stem_manager,articles.stem manager,model_articles_stem,articles_manager,1,1,1,0
+articles_stem_user,articles.stem user,model_articles_stem,articles_user,1,1,1,0
+
+articles_word_admin,articles.word admin,model_articles_word,articles_admin,1,1,1,1
+articles_word_manager,articles.word manager,model_articles_word,articles_manager,1,1,1,0
+articles_word_user,articles.word user,model_articles_word,articles_user,1,1,1,0

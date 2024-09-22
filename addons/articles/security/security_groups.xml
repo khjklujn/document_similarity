@@ -1,0 +1,13 @@
+<odoo>
+    <record id="articles_admin" model="res.groups">
+        <field name="name">Articles / Admin</field>
+    </record>
+
+    <record id="articles_manager" model="res.groups">
+        <field name="name">Articles / Manager</field>
+    </record>
+
+    <record id="articles_user" model="res.groups">
+        <field name="name">Articles / User</field>
+    </record>
+</odoo>

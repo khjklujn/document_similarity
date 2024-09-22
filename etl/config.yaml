@@ -1,0 +1,43 @@
+environment: dev
+
+databases:
+    slr:
+        driver: postgresql
+        user: slr
+        password: gAAAAABec1Yvx8DU3rUSsC6C-b1dRu0G-2W8jOIyI4Chj1eMtPTGcF10Sk8opgehPyzrVEcZ1YIz53pCK5KpTLbYgG6lv0BRAg==
+        url: localhost
+        # password: gAAAAABeUqiAnBuNF9yDKfhkClouu9uyPDYNxaZbRzomsP5TpoDwIdBcijeNHvv-aX6CSyQF6n5hY1AVbt0BncP0LLAys7y5TtZpM6cLgrsv5uSyOl4dbDY=
+        # url: slr.southcentralus.cloudapp.azure.com
+        database: slr
+
+    slr_v2:
+        driver: postgresql
+        user: slr
+        password: gAAAAABec1Yvx8DU3rUSsC6C-b1dRu0G-2W8jOIyI4Chj1eMtPTGcF10Sk8opgehPyzrVEcZ1YIz53pCK5KpTLbYgG6lv0BRAg==
+        url: localhost
+        # password: gAAAAABeUqiAnBuNF9yDKfhkClouu9uyPDYNxaZbRzomsP5TpoDwIdBcijeNHvv-aX6CSyQF6n5hY1AVbt0BncP0LLAys7y5TtZpM6cLgrsv5uSyOl4dbDY=
+        # url: slr.southcentralus.cloudapp.azure.com
+        database: slr_v2
+
+    slr_prod:
+        driver: postgresql
+        user: slr
+        # password: gAAAAABec1Yvx8DU3rUSsC6C-b1dRu0G-2W8jOIyI4Chj1eMtPTGcF10Sk8opgehPyzrVEcZ1YIz53pCK5KpTLbYgG6lv0BRAg==
+        # url: localhost
+        password: gAAAAABeUqiAnBuNF9yDKfhkClouu9uyPDYNxaZbRzomsP5TpoDwIdBcijeNHvv-aX6CSyQF6n5hY1AVbt0BncP0LLAys7y5TtZpM6cLgrsv5uSyOl4dbDY=
+        url: slr.southcentralus.cloudapp.azure.com
+        database: slr_v2
+
+
+odoo:
+    user: admin
+    password: gAAAAABei7JIcEniBgW9LZXh7q_3lsaffRVqQ9hMMUdcBEohZpxSwBYSABJ2JlDdS_bsUcZ0wtSmezbVBDnCFt7o5qcnvAIdPQ==
+    # url: https://slr.southcentralus.cloudapp.azure.com
+    url: http://localhost:8069
+    database: slr_v2
+
+grobid:
+    url: http://localhost:8080/api
+
+source_root: '/media/sf_dev/Downloads/Corpus/'
+# source_root: '/media/sf_dev/Documents/SLR'
