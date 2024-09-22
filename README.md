@@ -43,7 +43,7 @@ Which gives us the bag-of-words frequency counts of:
 | judi | 0.5 + 0.0i  | 1.0 + 0.0i  |
 | like | 0.0 + 2.0i  | 0.0 + 2.0i  |
 
-I then chose the magnitude of one minus the log2 variant of Shannon-Jenson Divergence to calculate the probability of interest an unknown document given a known prototype document.
+I then chose one minus the magnitude of the log2 variant of Shannon-Jenson Divergence to calculate the probability of interest an unknown document given a known prototype document.
 
 We then:
 
@@ -56,5 +56,6 @@ We then:
 We chose three iterations of no "on topic" articles to declare we had found all of the articles in the corpus that were of interest of the research being performed.  In total, we performed 18 iterations.  Almost all of the "on topic" articles had bubbled to the top of the list during the first five iterations, and it became increasingly difficult to reach a consensus in the "on/off topic" decisions in subsequent iterations.  During each iteration we also performed random sampling evaluations of articles outside the top 200.
 
 The two folders are:
+
 * addons:  A custom Odoo module to record the "on/off topic" evaluations and offer visibility into why the algorithm was ranking things the way it was.
 * etl:  The hackiness necessary to extract text from PDFs, clean-up, tokenizations, PoS identificaitons, and calculate the rankings (this was a single-use analysis, so hacky scripting was the right tool for the job).
