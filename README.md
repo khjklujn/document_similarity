@@ -43,7 +43,7 @@ Which gives us the bag-of-words frequency counts of:
 | judi | 0.5 + 0.0i  | 1.0 + 0.0i  |
 | like | 0.0 + 2.0i  | 0.0 + 2.0i  |
 
-I then chose one minus the magnitude of the log2 variant of Shannon-Jenson Divergence to calculate the probability of interest an unknown document given a known prototype document.
+I then chose one minus the magnitude of the log2 variant of Shannon-Jenson Divergence to represnt the probability of interest an unknown document given a known prototype document.
 
 We then:
 
