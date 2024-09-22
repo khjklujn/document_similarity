@@ -2,7 +2,7 @@
 
 Given a corpus of several thousand 20k word articles, how do you find the 2% of articles that are "on topic" when "on topic" is not necessarily among the primary topics of the article?
 
-This code was used in the research that culminated in the publication of [The New Rules of Marketing Across Channels (https://hbr.org/2024/06/the-new-rules-of-marketing-across-channels)].
+This code was used in the research that culminated in the publication of [The New Rules of Marketing Across Channels (https://hbr.org/2024/06/the-new-rules-of-marketing-across-channels)][The New Rules of Marketing Across Channels].
 
 Latent Dirichlet Allocation and Stochastic Block Modeling did a good job of extracting the topics that frequently occurred.  However, the topic of interest was not a topic that frequently occurs in marketing journals and attempts to “drill-down” into the results from LDA and SBM quickly became counter-intuitive and difficult to interpret.
 
