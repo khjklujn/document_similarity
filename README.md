@@ -45,7 +45,7 @@ Which gives us the bag-of-words frequency counts of:
 
 I then chose one minus the magnitude of the log2 variant of Shannon-Jenson Divergence to represnt the probability of interest an unknown document given a known prototype document.
 
-We then:
+We then selected a prototype article and:
 
 1. Sorted the articles according to their probability of interest.
 2. Evaluated the top 12 articles as "on topic" or "off topic".
@@ -53,7 +53,7 @@ We then:
 4. Demoted the "off topic" articles to "antitypes" by multiplying their token values by 0.5.
 5. Goto 1
 
-We chose three iterations of no "on topic" articles to declare we had found all of the articles in the corpus that were of interest of the research being performed.  In total, we performed 18 iterations.  Almost all of the "on topic" articles had bubbled to the top of the list during the first five iterations, and it became increasingly difficult to reach a consensus in the "on/off topic" decisions in subsequent iterations.  During each iteration we also performed random sampling evaluations of articles outside the top 200.
+We chose three iterations of no "on topic" articles to declare we had found all of the articles in the corpus that were of interest for the research being performed.  In total, we performed 18 iterations.  Almost all of the "on topic" articles had bubbled to the top of the list during the first five iterations, and it became increasingly difficult to reach a consensus in the "on/off topic" decisions in subsequent iterations.  During each iteration we also performed random sampling evaluations of articles outside the top 200.
 
 The two folders are:
 
