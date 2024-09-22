@@ -58,4 +58,4 @@ We chose three iterations of no "on topic" articles to declare we had found all 
 The two folders are:
 
 * addons:  A custom Odoo module to record the "on/off topic" evaluations and offer visibility into why the algorithm was ranking things the way it was.
-* etl:  The hackiness necessary to extract text from PDFs, clean-up, tokenizations, PoS identificaitons, and calculate the rankings (this was a single-use analysis, so hacky scripting was the right tool for the job).
+* etl:  The hackiness necessary to extract text from PDFs, clean-up, tokenizations, PoS identifications, and calculate the rankings (this was a single-use analysis, so hacky scripting was the right tool for the job).
