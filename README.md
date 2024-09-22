@@ -17,7 +17,7 @@ The reason for doing this was to address one of the inherent problems with bag-o
 
 Only using frequency counts, these two documents are evaulated as being exactly the same.
 
-I extended this by having the frequency counts be a two-dimensional vector that encoded the "nouniness" and "verbiness" of the tokens using a complex representation with nouniness mapped to the real component and verbiness mapped to the imaginary component.
+I extended bag-of-words by having the frequency counts be a two-dimensional vector that encoded the "nouniness" and "verbiness" of the tokens using a complex representation with nouniness mapped to the real component and verbiness mapped to the imaginary component.
 
 Using this encoding the token values break down as:
 
@@ -45,3 +45,16 @@ Which gives us the bag-of-words frequency counts of:
 
 I then chose the magnitude of one minus the log2 variant of Shannon-Jenson Divergence to calculate the probability of interest an unknown document given a known prototype document.
 
+We then:
+
+1. Sorted the articles according to their probability of interest.
+2. Evaluated the top 12 articles as "on topic" or "off topic".
+3. Promoted the "on topic" articles to "prototypes" by multiplying their token values by 2.0.
+4. Demoted the "off topic" articles to "antitypes" by multiplying their token values by 0.5.
+5. Goto 1
+
+We chose three iterations of no "on topic" articles to declare we had found all of the articles in the corpus that were of interest of the research being performed.  In total, we performed 18 iterations.  Almost all of the "on topic" articles had bubbled to the top of the list during the first five iterations, and it became increasingly difficult to reach a consensus in the "on/off topic" decisions in subsequent iterations.  During each iteration we also performed random sampling evaluations of articles outside the top 200.
+
+The two folders are:
+* addons:  A custom Odoo module to record the "on/off topic" evaluations and offer visibility into why the algorithm was ranking things the way it was.
+* etl:  The hackiness necessary to extract text from PDFs, clean-up, tokenizations, PoS identificaitons, and calculate the rankings (this was a single-use analysis, so hacky scripting was the right tool for the job).
